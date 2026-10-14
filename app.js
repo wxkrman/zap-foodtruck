@@ -15,7 +15,7 @@
   document.getElementById('sweets').innerHTML=c.grona_menyn.sotsaker.map(li).join('');
   const days=['Söndag','Måndag','Tisdag','Onsdag','Torsdag','Fredag','Lördag'],today=days[new Date().getDay()];
   document.getElementById('sched').innerHTML=c.schema.dagar.map(d=>`<li class="${d.dag===today?'now':''}"><span class="d">${esc(d.dag)}</span><span class="t">${esc(d.tid)}</span><span>${esc(d.plats)}</span></li>`).join('');
-  document.getElementById('map').src='https://maps.google.com/maps?q='+encodeURIComponent(c.schema.kartsok)+'&z=15&output=embed';
+  document.getElementById('map').src='https://maps.google.com/maps?q='+encodeURIComponent(c.schema.kartsok)+'&z=15&hl=sv&output=embed';
   document.getElementById('events').innerHTML=c.event.length?c.event.map(e=>`<div class="event reveal ${e.veg?'veg':''}"><div class="date">${esc(e.datum)}</div><div class="grow"><h3>${esc(e.titel)}</h3><p>${esc(e.text)}</p>${e.pris?`<p class="ep">${esc(e.pris)}</p>`:''}</div>${e.bokning?`<a class="btn" href="mailto:${esc(e.bokning)}?subject=${encodeURIComponent('Bokning '+e.titel+' '+e.datum)}">Boka</a>`:''}</div>`).join(''):'<p class="lead">Inga popups inplanerade just nu – håll koll på Instagram!</p>';
   document.getElementById('gallery').innerHTML=c.galleri.map(g=>`<img class="reveal" src="img/${esc(g)}" alt="ZAP" loading="lazy">`).join('');
   const f=c.foretag,m=document.getElementById('mail');m.textContent=f.epost;m.href='mailto:'+f.epost;

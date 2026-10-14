@@ -1,8 +1,8 @@
 /* V2 – strikt tvåfärgad: svart + ZAP-rosa */
 :root{--pk:#fa2058;--gr:#fa2058;--wh:#ffe9ef;--mu:#e8b9c6;--bk:#050304;--bk2:#0b0507}
 body{color:var(--wh)}
-.hero{background:#050304 url(hero-duo.jpg) center/cover}
-.hero .bgvid{opacity:.9}
+.hero{background:#050304 url(../img/post-logo-graphic.jpg) center/cover}
+.hero .bgvid{opacity:.9;filter:none}
 .hero-shade{background:linear-gradient(90deg,#050304ee 0%,#05030499 55%,#05030433 100%),linear-gradient(180deg,#05030466 0%,transparent 40%,#050304 100%)}
 .hero-title{color:var(--wh)}
 .hero-title .pink,.pink{color:var(--pk)}
@@ -32,14 +32,13 @@ body{color:var(--wh)}
 .event.veg h3:after{content:"VEG";font-size:10px;background:#b6ff2e;color:#000;padding:2px 7px;border-radius:99px;margin-left:10px;vertical-align:middle}
 .legend i{background:#b6ff2e;box-shadow:none;width:8px;height:8px}
 .map{border-color:var(--pk)}
-.map iframe{filter:invert(.92) hue-rotate(150deg) saturate(1.4) sepia(.2)}
 .sec-alt{background-color:var(--bk2);background-image:radial-gradient(circle at 0 0,#fa205818,transparent 45%)}
 .sched li.now{background:linear-gradient(90deg,#fa205826,transparent)}
-.gallery img{filter:grayscale(1) sepia(1) hue-rotate(295deg) saturate(5) brightness(.85) contrast(1.1);transition:filter .5s,transform .3s}
-.gallery img:hover{filter:none}
+.gallery img{filter:none!important}
 .about-img{box-shadow:0 0 0 3px var(--pk),0 20px 60px #fa205840}
 .foot-big{-webkit-text-stroke-color:var(--pk)}
 .grain{opacity:.06}
 .h em,.btn span{color:transparent!important;text-shadow:0 0 0 var(--pk),0 0 20px var(--pk)!important}
 .btn-big span{text-shadow:0 0 0 #050304!important}
 .ticker-track span{color:transparent;text-shadow:0 0 0 #050304}
+.map iframe{filter:none!important}

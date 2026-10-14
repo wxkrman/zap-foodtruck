@@ -139,7 +139,8 @@
         "plats": "Sandflygets parkering, Höganäs"
       }
     ],
-    "kartsok": "Sandflygets parkering, Höganäs"
+    "kartsok": "Sandflyget, Sandflygsgatan, 263 39 Höganäs",
+    "_kartsok": "Adressen som kartan visar. Skriv en gata + postnummer + ort (t.ex. \"Sandflygsgatan, 263 39 Höganäs\") så hittar Google rätt."
   },
   "_event": "Popups och event. Lägg till eller ta bort block.",
   "event": [
