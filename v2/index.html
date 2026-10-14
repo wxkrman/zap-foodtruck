@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="sv" class="v2">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ZAP Foodtruck – Höganäs</title>
+<meta name="description" content="ZAP Foodtruck – street food på Sandflygets parkering i Höganäs. Lunch 11–14.">
+<meta name="theme-color" content="#050505">
+<link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="256x256" href="../img/logo-face-256.png">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Shade&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css?v=6"><link rel="stylesheet" href="v2.css?v=1">
+</head>
+<body class="locked">
+<div class="grain" aria-hidden="true"></div>
+
+<!-- 1. VÄLKOMSTSCEN -->
+<section id="intro" aria-label="Välkommen">
+  <video class="bgvid" autoplay muted loop playsinline poster="../img/post-logo-graphic.jpg" preload="none">
+    <source src="../videos/intro.mp4" type="video/mp4">
+  </video>
+  <div class="intro-fallback" aria-hidden="true">
+    <img src="../img/post-logo-graphic.jpg" alt="">
+  </div>
+  <div class="bolts" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+  <div class="intro-inner">
+    <img class="intro-logo" src="../img/post-logo-graphic.jpg" alt="ZAP logga">
+    <h1 class="neon">ZAP</h1>
+    <p class="kicker">Foodtruck · Höganäs</p>
+    <button id="enter" class="btn btn-big">KLIV IN <span>⚡</span></button>
+  </div>
+</section>
+
+<header class="nav">
+  <a href="#top" class="nav-logo"><img src="../img/logo-face-256.png" srcset="../img/logo-face-256.png 1x, ../img/logo-face-512.png 2x" alt="ZAP" width="52" height="52"></a>
+  <nav><a href="#meny">Meny</a><a href="#schema">Schema</a><a href="#event">Popups</a><a href="#kontakt">Kontakt</a></nav>
+</header>
+
+<main id="top">
+  <!-- 2. HERO -->
+  <section class="hero">
+    <video class="bgvid" autoplay muted loop playsinline poster="hero-duo.jpg" preload="none">
+      <source src="../videos/hero.mp4" type="video/mp4">
+    </video>
+    <div class="hero-shade"></div>
+    <div class="hero-inner">
+      <div class="badge reveal"><span class="pulse"></span>Här står vi idag</div>
+      <p class="today reveal" data-c="idag.plats"></p>
+      <p class="today-sub reveal"><b data-c="idag.tid"></b> · <span data-c="idag.notis"></span></p>
+      <h2 class="hero-title reveal"><span class="pink">ZAP</span><br>FOODTRUCK</h2>
+      <p class="slogan reveal" data-c="foretag.slogan"></p>
+      <div class="reveal"><a href="#meny" class="btn">Se veckans meny</a> <a href="#schema" class="btn btn-ghost">Hitta hit</a></div>
+    </div>
+  </section>
+
+  <div class="ticker" aria-hidden="true"><div class="ticker-track" id="ticker"></div></div>
+
+  <!-- 3. MENY -->
+  <section id="meny" class="sec">
+    <h2 class="h reveal"><span data-c="meny.rubrik"></span> <em>⚡</em></h2>
+    <p class="lead reveal" data-c="meny.info"></p>
+    <div class="legend reveal"><span><i class="v"></i>Grönt = vegetariskt</span></div>
+    <div class="cards" id="cards"></div>
+    <div class="green reveal">
+      <h3 class="h3 acid" data-c="grona_menyn.rubrik"></h3>
+      <div class="green-grid">
+        <ul class="list" id="green"></ul>
+        <div><h4>Sötsaker</h4><ul class="list" id="sweets"></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. SCHEMA -->
+  <section id="schema" class="sec sec-alt">
+    <h2 class="h reveal">Schema <em>&</em> plats</h2>
+    <div class="sched-wrap">
+      <div class="reveal">
+        <h3 class="h3 pink" data-c="schema.rubrik"></h3>
+        <ul class="sched" id="sched"></ul>
+      </div>
+      <div class="map reveal"><iframe id="map" title="Karta" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+    </div>
+  </section>
+
+  <!-- 5. EVENT -->
+  <section id="event" class="sec">
+    <h2 class="h reveal">Popups <em>&</em> event</h2>
+    <div class="events" id="events"></div>
+  </section>
+
+  <!-- 6. GALLERI -->
+  <section id="galleri" class="sec sec-alt">
+    <h2 class="h reveal">Galleri</h2>
+    <div class="gallery" id="gallery"></div>
+  </section>
+
+  <!-- 7. OM OSS / KONTAKT -->
+  <section id="kontakt" class="sec">
+    <div class="about">
+      <img class="about-img reveal" src="../img/post-zap-pink-illustration.jpg" alt="ZAP illustration" loading="lazy">
+      <div>
+        <h2 class="h reveal">Om ZAP</h2>
+        <p class="lead reveal" data-c="om_oss"></p>
+        <h3 class="h3 acid reveal">Kontakt & bokning</h3>
+        <p class="reveal"><a class="mail" id="mail"></a></p>
+        <div class="reveal socials"><a class="btn" id="ig" target="_blank" rel="noopener">Instagram</a> <a class="btn btn-ghost" id="fb" target="_blank" rel="noopener">Facebook</a></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="foot-big">ZAP<span class="fb" style="font-size:inherit"></span></div>
+  <p><span data-c="foretag.namn"></span> · <span data-c="idag.plats"></span></p>
+  <p class="small">© <span id="yr"></span> ZAP Foodtruck</p>
+</footer>
+
+<div class="lightbox" id="lb"><img alt=""></div>
+<script src="app.js?v=1"></script>
+</body>
+</html>
