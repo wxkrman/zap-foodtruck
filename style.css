@@ -150,3 +150,4 @@ a{color:inherit}
 #intro .intro-fallback img{display:none}
 #intro .bolts{z-index:2;position:absolute;inset:0}
 #intro .intro-inner{z-index:3}
+.intro-logo{object-fit:cover;aspect-ratio:1}

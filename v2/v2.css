@@ -1,7 +1,8 @@
 /* V2 – strikt tvåfärgad: svart + ZAP-rosa */
 :root{--pk:#fa2058;--gr:#fa2058;--wh:#ffe9ef;--mu:#e8b9c6;--bk:#050304;--bk2:#0b0507}
 body{color:var(--wh)}
-.hero{background:#050304 url(../img/post-logo-graphic.jpg) center/cover}
+.hero{background:#050304 url(../img/zap-character.jpg) center 12%/cover no-repeat}
+.hero .bgvid{object-position:center 12%}
 .hero .bgvid{opacity:.9;filter:none}
 .hero-shade{background:linear-gradient(90deg,#050304ee 0%,#05030499 55%,#05030433 100%),linear-gradient(180deg,#05030466 0%,transparent 40%,#050304 100%)}
 .hero-title{color:var(--wh)}
@@ -49,3 +50,5 @@ body{color:var(--wh)}
 @media(hover:hover){.map:hover iframe{filter:none;opacity:1}.map:hover .map-hint{opacity:0}.map:hover .map-cover{pointer-events:none}}
 .map.live iframe{filter:none;opacity:1}.map.live .map-hint{opacity:0}.map.live .map-cover{pointer-events:none}
 #intro .intro-fallback{background:radial-gradient(ellipse at 50% 45%,#05030422 0%,#050304aa 60%,#050304ee 100%),linear-gradient(180deg,#05030499 0%,#fa205812 45%,#050304cc 100%)}
+@media(min-width:800px){.hero{background-size:auto 150%;background-position:right 6% top 0}
+.hero-shade{background:linear-gradient(90deg,#050304 0%,#050304ee 35%,#05030466 65%,#05030422 100%),linear-gradient(180deg,#05030466 0%,transparent 35%,#050304 100%)}}
