@@ -1,0 +1,75 @@
+{
+  "_instruktion": "Redigera texterna mellan citattecknen. Ta inte bort kommatecken eller klamrar. Enklast: öppna admin.html i stället. Fält som börjar med _ är bara kommentarer.",
+  "_om_falt": "pris: skriv t.ex. \"140:-\" eller lämna tomt \"\" så visas inget pris. bild: filnamn i mappen img/ eller tomt.",
+
+  "foretag": {
+    "namn": "ZAP Foodtruck",
+    "slogan": "Street food på Sandflygets parkering i Höganäs.",
+    "instagram": "https://www.instagram.com/zapfoodtruck/",
+    "facebook": "https://www.facebook.com/703775459474633",
+    "epost": "info@pirenraa.se"
+  },
+
+  "_idag": "Rutan 'Här står vi idag' högst upp på sidan.",
+  "idag": {
+    "plats": "Sandflygets parkering, Höganäs",
+    "tid": "11–14",
+    "notis": "Dryck ingår i alla priser"
+  },
+
+  "_meny": "Veckans meny. Byt vecka och rätter varje vecka.",
+  "meny": {
+    "rubrik": "Meny v42",
+    "info": "Dryck ingår i alla priser",
+    "ratter": [
+      { "namn": "The Classic", "beskrivning": "", "pris": "140:-", "tagg": "", "bild": "" },
+      { "namn": "The Visitor", "beskrivning": "", "pris": "140/170:-", "tagg": "", "bild": "" },
+      { "namn": "The Green One", "beskrivning": "", "pris": "140:-", "tagg": "", "bild": "" },
+      { "namn": "Veckans rätt", "beskrivning": "Korv Stroganoff", "pris": "120:-", "tagg": "Veckans", "bild": "food-veckans-lunch-v42.jpg" },
+      { "namn": "Karl Special", "beskrivning": "", "pris": "120:-", "tagg": "", "bild": "food-karl-special.jpg" }
+    ]
+  },
+
+  "_grona": "The Green Menu – vegetariskt.",
+  "grona_menyn": {
+    "rubrik": "The Green Menu",
+    "ratter": [
+      { "namn": "Friterad Halloumi", "pris": "80:-" },
+      { "namn": "Halloumi Katsu", "pris": "120:-" },
+      { "namn": "Pommes Lila", "pris": "50:-" },
+      { "namn": "French Onion Pasta", "pris": "" },
+      { "namn": "Halloumi Burger", "pris": "140:-" },
+      { "namn": "Vegansk rätt", "pris": "130:-" }
+    ],
+    "sotsaker": [
+      { "namn": "Gräddtårta", "pris": "" },
+      { "namn": "Chokladbollar", "pris": "" }
+    ]
+  },
+
+  "_schema": "Veckoschema. En rad per dag.",
+  "schema": {
+    "rubrik": "Vecka 42",
+    "dagar": [
+      { "dag": "Måndag", "tid": "11–14", "plats": "Sandflygets parkering, Höganäs" },
+      { "dag": "Tisdag", "tid": "11–14", "plats": "Sandflygets parkering, Höganäs" },
+      { "dag": "Onsdag", "tid": "11–14", "plats": "Sandflygets parkering, Höganäs" },
+      { "dag": "Torsdag", "tid": "11–14", "plats": "Sandflygets parkering, Höganäs" },
+      { "dag": "Fredag", "tid": "11–14", "plats": "Sandflygets parkering, Höganäs" }
+    ],
+    "kartsok": "Sandflygets parkering, Höganäs"
+  },
+
+  "_event": "Popups och event. Lägg till eller ta bort block.",
+  "event": [
+    { "datum": "6/11", "titel": "Popup – vegetarisk meny", "text": "Halloumi Katsu popup.", "pris": "195:-", "bokning": "info@pirenraa.se" }
+  ],
+
+  "om_oss": "ZAP är en foodtruck i Höganäs. Hitta oss på Sandflygets parkering på lunchen – följ oss på Instagram för veckans meny och kommande popups.",
+
+  "galleri": [
+    "post-logo-graphic.jpg", "post-zap-pink-illustration.jpg", "food-halloumi-katsu.jpg",
+    "food-french-onion-pasta.jpg", "photo-hoganas-first-week.jpg", "photo-sack-packaging.jpg",
+    "menu-v42.jpg", "menu-zap-the-green-menu.jpg", "food-karl-special.jpg"
+  ]
+}
