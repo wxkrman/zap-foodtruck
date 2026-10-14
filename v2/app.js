@@ -43,3 +43,7 @@
   // Pausa video om filen saknas (då syns fallback)
   document.querySelectorAll('video').forEach(v=>{v.addEventListener('error',()=>v.style.display='none',true);v.querySelector('source').addEventListener('error',()=>v.style.display='none');});
 })();
+// Karta: första tryck/klick visar originalfärger och gör kartan interaktiv
+(function(){const w=document.getElementById('mapwrap'),cv=document.getElementById('mapcover');if(!w)return;
+ cv.addEventListener('click',()=>w.classList.add('live'));
+ document.addEventListener('click',e=>{if(!w.contains(e.target))w.classList.remove('live')});})();

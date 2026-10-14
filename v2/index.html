@@ -11,7 +11,7 @@
 <link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Shade&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../style.css?v=6"><link rel="stylesheet" href="v2.css?v=2">
+<link rel="stylesheet" href="../style.css?v=6"><link rel="stylesheet" href="v2.css?v=3">
 </head>
 <body class="locked">
 <div class="grain" aria-hidden="true"></div>
@@ -80,7 +80,7 @@
         <h3 class="h3 pink" data-c="schema.rubrik"></h3>
         <ul class="sched" id="sched"></ul>
       </div>
-      <div class="map reveal"><iframe id="map" title="Karta" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+      <div class="map reveal" id="mapwrap"><div class="map-cover" id="mapcover" aria-hidden="true"></div><span class="map-hint">Håll över / tryck för karta</span><iframe id="map" title="Karta" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
     </div>
   </section>
 
@@ -118,6 +118,6 @@
 </footer>
 
 <div class="lightbox" id="lb"><img alt=""></div>
-<script src="app.js?v=3"></script>
+<script src="app.js?v=4"></script>
 </body>
 </html>

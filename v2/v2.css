@@ -41,4 +41,10 @@ body{color:var(--wh)}
 .h em,.btn span{color:transparent!important;text-shadow:0 0 0 var(--pk),0 0 20px var(--pk)!important}
 .btn-big span{text-shadow:0 0 0 #050304!important}
 .ticker-track span{color:transparent;text-shadow:0 0 0 #050304}
-.map iframe{filter:none!important}
+/* Karta: rosa/svart som standard, originalfärger vid hover/tryck */
+.map{position:relative}
+.map iframe{filter:grayscale(1) invert(.92) sepia(1) hue-rotate(300deg) saturate(3.2) brightness(.85) contrast(1.05);opacity:.85;transition:filter .4s ease,opacity .4s ease}
+.map-cover{position:absolute;inset:0;z-index:2;cursor:pointer}
+.map-hint{position:absolute;right:12px;bottom:12px;z-index:3;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--wh);background:#050304cc;border:1px solid #fa205866;padding:5px 10px;border-radius:99px;pointer-events:none;opacity:.8;transition:opacity .4s}
+@media(hover:hover){.map:hover iframe{filter:none;opacity:1}.map:hover .map-hint{opacity:0}.map:hover .map-cover{pointer-events:none}}
+.map.live iframe{filter:none;opacity:1}.map.live .map-hint{opacity:0}.map.live .map-cover{pointer-events:none}
