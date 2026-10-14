@@ -143,3 +143,4 @@ a{color:inherit}
 .foot-big .fb{filter:none;color:var(--pk);text-shadow:0 0 20px var(--pk)}
 .foot-big .fb{display:inline-block;width:.5em;height:.8em;background:var(--pk);clip-path:polygon(55% 0,10% 55%,45% 55%,30% 100%,90% 40%,55% 40%,75% 0);font-size:0;vertical-align:baseline}
 .foot-big{font-size:clamp(60px,18vw,200px)}
+.nav-logo img{width:52px;height:52px;border-radius:50%;box-shadow:0 0 0 2px var(--pk),0 0 18px var(--pk);transition:transform .3s}.nav-logo img:hover{transform:rotate(-8deg) scale(1.08)}
