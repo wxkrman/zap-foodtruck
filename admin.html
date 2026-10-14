@@ -24,7 +24,7 @@ const F={
  'Här står vi idag':[['idag','plats','Plats'],['idag','tid','Tid'],['idag','notis','Notis']],
  'Veckans meny':[['meny','rubrik','Rubrik (t.ex. Meny v43)'],['meny','info','Info']],
  'The Green Menu':[['grona_menyn','rubrik','Rubrik']],
- 'Schema':[['schema','rubrik','Rubrik (t.ex. Vecka 43)'],['schema','kartsok','Adress för kartan']]
+ 'Schema':[['schema','rubrik','Rubrik (t.ex. Vecka 43)'],['schema','kartsok','Adress för kartan'],['schema','koordinater','Kartans koordinater (lat,lng) – används före adressen']]
 };
 const LISTS={
  'Veckans meny':[c=>c.meny.ratter,['namn','beskrivning','pris','tagg','bild','veg'],{namn:'',beskrivning:'',pris:'',tagg:'',bild:'',veg:false}],
@@ -57,5 +57,5 @@ document.addEventListener('click',e=>{const d=e.target.dataset;
  if(d.del){if(confirm('Ta bort raden?')){LISTS[d.del][0](c).splice(d.i,1);render()}}});
 document.getElementById('dl').onclick=()=>{const b=new Blob([JSON.stringify(c,null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='content.json';a.click()};
 document.getElementById('file').onchange=async e=>{c=JSON.parse(await e.target.files[0].text());render()};
-fetch('content.json',{cache:'no-store'}).then(r=>r.json()).then(j=>{c=j;render()}).catch(()=>document.getElementById('form').textContent='Kunde inte läsa content.json – öppna filen med knappen ovan.');
+fetch('content.json?t='+Date.now(),{cache:'no-store'}).then(r=>r.json()).then(j=>{c=j;render()}).catch(()=>document.getElementById('form').textContent='Kunde inte läsa content.json – öppna filen med knappen ovan.');
 </script></body></html>

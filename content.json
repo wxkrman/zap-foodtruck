@@ -140,7 +140,9 @@
       }
     ],
     "kartsok": "Sandflyget, Sandflygsgatan, 263 39 Höganäs",
-    "_kartsok": "Adressen som kartan visar. Skriv en gata + postnummer + ort (t.ex. \"Sandflygsgatan, 263 39 Höganäs\") så hittar Google rätt."
+    "_kartsok": "Adressen som kartan visar. Skriv en gata + postnummer + ort (t.ex. \"Sandflygsgatan, 263 39 Höganäs\") så hittar Google rätt.",
+    "koordinater": "56.2111,12.5537",
+    "_koordinater": "Kartans position (lat,lng). Högerklicka på platsen i Google Maps och klicka på siffrorna för att kopiera dem. Om tomt används kartsok-adressen."
   },
   "_event": "Popups och event. Lägg till eller ta bort block.",
   "event": [
