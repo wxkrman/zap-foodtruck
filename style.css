@@ -144,3 +144,9 @@ a{color:inherit}
 .foot-big .fb{display:inline-block;width:.5em;height:.8em;background:var(--pk);clip-path:polygon(55% 0,10% 55%,45% 55%,30% 100%,90% 40%,55% 40%,75% 0);font-size:0;vertical-align:baseline}
 .foot-big{font-size:clamp(60px,18vw,200px)}
 .nav-logo img{width:52px;height:52px;border-radius:50%;box-shadow:0 0 0 2px var(--pk),0 0 18px var(--pk);transition:transform .3s}.nav-logo img:hover{transform:rotate(-8deg) scale(1.08)}
+/* Introvideo */
+#intro .intro-vid{opacity:1;z-index:0;object-fit:cover}
+#intro .intro-fallback{z-index:1;background:radial-gradient(ellipse at 50% 45%,#05050533 0%,#050505aa 60%,#050505ee 100%),linear-gradient(180deg,#05050599 0%,#05050544 40%,#050505cc 100%)}
+#intro .intro-fallback img{display:none}
+#intro .bolts{z-index:2;position:absolute;inset:0}
+#intro .intro-inner{z-index:3}

@@ -48,3 +48,4 @@ body{color:var(--wh)}
 .map-hint{position:absolute;right:12px;bottom:12px;z-index:3;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--wh);background:#050304cc;border:1px solid #fa205866;padding:5px 10px;border-radius:99px;pointer-events:none;opacity:.8;transition:opacity .4s}
 @media(hover:hover){.map:hover iframe{filter:none;opacity:1}.map:hover .map-hint{opacity:0}.map:hover .map-cover{pointer-events:none}}
 .map.live iframe{filter:none;opacity:1}.map.live .map-hint{opacity:0}.map.live .map-cover{pointer-events:none}
+#intro .intro-fallback{background:radial-gradient(ellipse at 50% 45%,#05030422 0%,#050304aa 60%,#050304ee 100%),linear-gradient(180deg,#05030499 0%,#fa205812 45%,#050304cc 100%)}

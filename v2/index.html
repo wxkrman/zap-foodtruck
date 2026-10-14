@@ -11,14 +11,15 @@
 <link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Shade&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../style.css?v=6"><link rel="stylesheet" href="v2.css?v=3">
+<link rel="stylesheet" href="../style.css?v=9"><link rel="stylesheet" href="v2.css?v=4">
 </head>
 <body class="locked">
 <div class="grain" aria-hidden="true"></div>
 
 <!-- 1. VÄLKOMSTSCEN -->
 <section id="intro" aria-label="Välkommen">
-  <video class="bgvid" autoplay muted loop playsinline poster="../img/post-logo-graphic.jpg" preload="none">
+  <video class="bgvid intro-vid" autoplay muted loop playsinline preload="auto" poster="../videos/intro-poster.jpg" disablepictureinpicture>
+    <source src="../videos/intro.webm" type="video/webm">
     <source src="../videos/intro.mp4" type="video/mp4">
   </video>
   <div class="intro-fallback" aria-hidden="true">
