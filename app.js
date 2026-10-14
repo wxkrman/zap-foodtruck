@@ -7,7 +7,7 @@
   document.querySelectorAll('[data-c]').forEach(el=>el.textContent=get(c,el.dataset.c)??'');
   const price=p=>p?`<span class="price">${esc(p)}</span>`:'';
   document.getElementById('cards').innerHTML=c.meny.ratter.map(r=>`
-    <article class="card reveal">${r.tagg?`<span class="tag">${esc(r.tagg)}</span>`:''}
+    <article class="card reveal ${r.veg?'veg':''}">${r.veg?'<span class="vtag">Veg</span>':''}${r.tagg?`<span class="tag">${esc(r.tagg)}</span>`:''}
       ${r.bild?`<div class="card-img" style="background-image:url('img/${esc(r.bild)}')"></div>`:`<div class="card-img ph"><span>⚡</span></div>`}
       <div class="card-b"><div><h3>${esc(r.namn)}</h3>${r.beskrivning?`<p>${esc(r.beskrivning)}</p>`:''}</div>${price(r.pris)}</div></article>`).join('');
   const li=r=>`<li><span>${esc(r.namn)}</span>${r.pris?`<b>${esc(r.pris)}</b>`:''}</li>`;
@@ -16,7 +16,7 @@
   const days=['Söndag','Måndag','Tisdag','Onsdag','Torsdag','Fredag','Lördag'],today=days[new Date().getDay()];
   document.getElementById('sched').innerHTML=c.schema.dagar.map(d=>`<li class="${d.dag===today?'now':''}"><span class="d">${esc(d.dag)}</span><span class="t">${esc(d.tid)}</span><span>${esc(d.plats)}</span></li>`).join('');
   document.getElementById('map').src='https://maps.google.com/maps?q='+encodeURIComponent(c.schema.kartsok)+'&z=15&output=embed';
-  document.getElementById('events').innerHTML=c.event.length?c.event.map(e=>`<div class="event reveal"><div class="date">${esc(e.datum)}</div><div class="grow"><h3>${esc(e.titel)}</h3><p>${esc(e.text)}</p>${e.pris?`<p class="ep">${esc(e.pris)}</p>`:''}</div>${e.bokning?`<a class="btn" href="mailto:${esc(e.bokning)}?subject=${encodeURIComponent('Bokning '+e.titel+' '+e.datum)}">Boka</a>`:''}</div>`).join(''):'<p class="lead">Inga popups inplanerade just nu – håll koll på Instagram!</p>';
+  document.getElementById('events').innerHTML=c.event.length?c.event.map(e=>`<div class="event reveal ${e.veg?'veg':''}"><div class="date">${esc(e.datum)}</div><div class="grow"><h3>${esc(e.titel)}</h3><p>${esc(e.text)}</p>${e.pris?`<p class="ep">${esc(e.pris)}</p>`:''}</div>${e.bokning?`<a class="btn" href="mailto:${esc(e.bokning)}?subject=${encodeURIComponent('Bokning '+e.titel+' '+e.datum)}">Boka</a>`:''}</div>`).join(''):'<p class="lead">Inga popups inplanerade just nu – håll koll på Instagram!</p>';
   document.getElementById('gallery').innerHTML=c.galleri.map(g=>`<img class="reveal" src="img/${esc(g)}" alt="ZAP" loading="lazy">`).join('');
   const f=c.foretag,m=document.getElementById('mail');m.textContent=f.epost;m.href='mailto:'+f.epost;
   document.getElementById('ig').href=f.instagram;document.getElementById('fb').href=f.facebook;

@@ -27,11 +27,11 @@ const F={
  'Schema':[['schema','rubrik','Rubrik (t.ex. Vecka 43)'],['schema','kartsok','Adress för kartan']]
 };
 const LISTS={
- 'Veckans meny':[c=>c.meny.ratter,['namn','beskrivning','pris','tagg','bild'],{namn:'',beskrivning:'',pris:'',tagg:'',bild:''}],
- 'The Green Menu':[c=>c.grona_menyn.ratter,['namn','pris'],{namn:'',pris:''}],
- 'Sötsaker':[c=>c.grona_menyn.sotsaker,['namn','pris'],{namn:'',pris:''}],
+ 'Veckans meny':[c=>c.meny.ratter,['namn','beskrivning','pris','tagg','bild','veg'],{namn:'',beskrivning:'',pris:'',tagg:'',bild:'',veg:false}],
+ 'The Green Menu':[c=>c.grona_menyn.ratter,['namn','pris','veg'],{namn:'',pris:'',veg:true}],
+ 'Sötsaker':[c=>c.grona_menyn.sotsaker,['namn','pris','veg'],{namn:'',pris:'',veg:true}],
  'Schema':[c=>c.schema.dagar,['dag','tid','plats'],{dag:'',tid:'11–14',plats:''}],
- 'Popups & event':[c=>c.event,['datum','titel','text','pris','bokning'],{datum:'',titel:'',text:'',pris:'',bokning:'info@pirenraa.se'}]
+ 'Popups & event':[c=>c.event,['datum','titel','text','pris','bokning','veg'],{veg:false,datum:'',titel:'',text:'',pris:'',bokning:'info@pirenraa.se'}]
 };
 const esc=s=>String(s??'').replace(/"/g,'&quot;').replace(/</g,'&lt;');
 function render(){
@@ -40,7 +40,7 @@ function render(){
  for(const s of sections){
   h+=`<h2>${s}</h2>`;
   (F[s]||[]).forEach(([a,b,l])=>h+=`<label>${l}</label><input data-a="${a}" data-b="${b}" value="${esc(c[a][b])}">`);
-  if(LISTS[s]){const [g,keys]=LISTS[s];g(c).forEach((it,i)=>{h+=`<div class="row">`+keys.map(k=>`<div><label>${k}</label><input data-l="${s}" data-i="${i}" data-k="${k}" value="${esc(it[k])}"></div>`).join('')+`<div><label>&nbsp;</label><button class="del" data-del="${s}" data-i="${i}">Ta bort</button></div></div>`});
+  if(LISTS[s]){const [g,keys]=LISTS[s];g(c).forEach((it,i)=>{h+=`<div class="row">`+keys.map(k=>k==='veg'?`<div><label>vegetariskt (grönt)</label><input type="checkbox" style="width:24px;height:24px" data-l="${s}" data-i="${i}" data-k="veg" ${it.veg?'checked':''}></div>`:`<div><label>${k}</label><input data-l="${s}" data-i="${i}" data-k="${k}" value="${esc(it[k])}"></div>`).join('')+`<div><label>&nbsp;</label><button class="del" data-del="${s}" data-i="${i}">Ta bort</button></div></div>`});
    h+=`<button class="add" data-add="${s}">+ Lägg till</button>`;}
   if(s==='Om oss')h+=`<textarea id="om">${esc(c.om_oss)}</textarea>`;
   if(s==='Galleri')h+=`<label>Bildfiler i img/ (en per rad)</label><textarea id="gal" style="min-height:160px">${esc(c.galleri.join('\n'))}</textarea>`;
@@ -49,7 +49,7 @@ function render(){
 }
 document.addEventListener('input',e=>{const t=e.target,d=t.dataset;
  if(d.a)c[d.a][d.b]=t.value;
- else if(d.l)LISTS[d.l][0](c)[d.i][d.k]=t.value;
+ else if(d.l)LISTS[d.l][0](c)[d.i][d.k]=t.type==='checkbox'?t.checked:t.value;
  else if(t.id==='om')c.om_oss=t.value;
  else if(t.id==='gal')c.galleri=t.value.split('\n').map(x=>x.trim()).filter(Boolean);});
 document.addEventListener('click',e=>{const d=e.target.dataset;

@@ -2,7 +2,7 @@
 
 ## Filerna
 - `index.html` – själva sidan (behöver inte ändras)
-- `content.json` – **ALLT innehåll**: meny, priser, schema, event, "Här står vi idag", texter
+- `content.json` – **ALLT innehåll** (fältet `veg`: true = vegetariskt, visas grönt; false = kött, visas rosa/rött): meny, priser, schema, event, "Här står vi idag", texter
 - `admin.html` – enkel redigerare för content.json
 - `img/` – bilder · `videos/` – lägg videorna här
 - `style.css`, `app.js` – design och logik (rör inte om du inte vill)
